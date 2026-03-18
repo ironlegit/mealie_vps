@@ -2,7 +2,7 @@ services:
 
   # Reverse Proxy ----
   swag:
-    image: ghcr.io/linuxserver/swag
+    image: lscr.io/linuxserver/swag:latest
     container_name: swag
     cap_add:
       - NET_ADMIN
@@ -26,7 +26,7 @@ services:
 
   # Mealie ----
   mealie:
-    image: ghcr.io/mealie-recipes/mealie:v3.11.0  
+    image: ghcr.io/mealie-recipes/mealie:v3.12.0
     container_name: mealie
     restart: always
     networks:
@@ -45,9 +45,6 @@ services:
       DB_ENGINE: sqlite
       TZ: UTC
       BASE_URL: https://${MEALIE_DOMAIN}
-#      DEFAULT_EMAIL: "changeme@example.com"
-#      DEFAULT_GROUP: "Home"
-#      DEFAULT_HOUSEHOLD: "Family"
 
 volumes:
   mealie-data:
