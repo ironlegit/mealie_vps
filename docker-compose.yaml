@@ -2,7 +2,7 @@ services:
 
   # Reverse Proxy ----
   swag:
-    image: ghcr.io/linuxserver/swag
+    image: lscr.io/linuxserver/swag:latest
     container_name: swag
     cap_add:
       - NET_ADMIN
