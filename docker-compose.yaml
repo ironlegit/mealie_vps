@@ -45,9 +45,6 @@ services:
       DB_ENGINE: sqlite
       TZ: UTC
       BASE_URL: https://${MEALIE_DOMAIN}
-#      DEFAULT_EMAIL: "changeme@example.com"
-#      DEFAULT_GROUP: "Home"
-#      DEFAULT_HOUSEHOLD: "Family"
 
 volumes:
   mealie-data:
