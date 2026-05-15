@@ -11,7 +11,7 @@ services:
       - PGID=1000
       - TZ=UTC
       - URL=${MEALIE_DOMAIN}
-      # Cert challenge
+      # Cert challenge 
       - VALIDATION=http
       - ONLY_SUBDOMAINS=false # If you wish to get certs only for certain subdomains
       - STAGING=false # enable to receive certs in staging mode
@@ -45,6 +45,13 @@ services:
       DB_ENGINE: sqlite
       TZ: UTC
       BASE_URL: https://${MEALIE_DOMAIN}
+      # Email config
+      SMTP_HOST: ${MEALIE_EMAIL_HOST}
+      SMTP_PORT: ${MEALIE_EMAIL_PORT}
+      SMTP_AUTH_STRATEGY: ${MEALIE_EMAIL_AUTH}
+      SMTP_FROM_EMAIL: ${MEALIE_EMAIL}
+      SMTP_USER: ${MEALIE_EMAIL}
+      SMTP_PASSWORD: ${MEALIE_EMAIL_PW}
 
 volumes:
   mealie-data:
